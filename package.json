@@ -1,0 +1,24 @@
+{
+  "name": "superbluestar-github-io",
+  "version": "1.0.0",
+  "description": "superbluestar's portfolio",
+  "repository": "https://github.com/SuperBluestar/SuperBluestar.github.io.git",
+  "author": "SuperBluestar <alexander116gm@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "private": null,
+  "dependencies": {
+    "next": "^12.1.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4"
+  }
+}
