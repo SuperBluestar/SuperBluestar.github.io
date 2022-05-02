@@ -1,6 +1,4 @@
-import { MongoClient } from 'mongodb';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getDbClient } from '../../api/utils/db';
 
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   try {

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useContext } from 'react';
 import TextCards from 'shared/components/text-cards';

@@ -5,6 +5,7 @@ import '../styles/global.css';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Script from 'next/script';
 import Loader from '../shared/components/loader';
 import CookieAlert from '../shared/components/cookie-alert';
 
@@ -80,32 +81,8 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-2595CLJE11" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `       
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-2595CLJE11');`
-          }}
-        /> */}
-        {/* <script>
-          dangerouslySetInnerHTML=
-          {{
-            __html: `(function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2472275,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
-          }}
-        </script> */}
 
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `(function(h,o,t,j,a,r){
               h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
