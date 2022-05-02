@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-// import { getDbClient } from '../../api/utils/db';
 
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   try {
@@ -20,12 +19,10 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
       profile_img: '/android-chrome-512x512.png',
       calendyUrl: ''
     };
-    console.log('==');
     res.statusCode = 200;
     res.json(data);
   } catch (err) {
     res.statusCode = 500;
-    console.log('err.message');
     res.json({ success: false, error: err });
   }
 };

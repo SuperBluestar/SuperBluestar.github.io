@@ -1,10 +1,9 @@
 import { useContext } from 'react';
-import { InlineWidget } from 'react-calendly';
 import { PersonalDetailsContext } from 'shared/utils/contexts';
 import { PersonalDetails } from 'shared/utils/types';
 
 export default function Connect(): JSX.Element {
-  const { calendyUrl, socialMedia }: PersonalDetails = useContext(PersonalDetailsContext);
+  const { socialMedia }: PersonalDetails = useContext(PersonalDetailsContext);
   return (
     <>
       <div className="bg-blue pt-28 h-auto min-h-screen">

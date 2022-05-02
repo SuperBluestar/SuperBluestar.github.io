@@ -1,15 +1,6 @@
 import { HeaderSmall } from '@shared-components';
-import { useEffect, useState } from 'react';
-import { getGithubDetails } from '@utils/apiService';
-import Tilt from 'react-tilt';
 
 export default function RepoDetails(): JSX.Element {
-  const [repoData, setRepoData] = useState(undefined);
-  useEffect(() => {
-    // getGithubDetails().then((result) => {
-    //   setRepoData(result);
-    // });
-  }, []);
   return (
     <>
       <div className="relative h-auto py-10 lg:py-10">
@@ -32,39 +23,6 @@ export default function RepoDetails(): JSX.Element {
               </a>
             </div>
           </div>
-          {repoData && (
-            <div className="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col justify-center items-center my-10 sm:mt-0 px-8 lg:p-24">
-              <a href={repoData.html_url}>
-                <Tilt className="Tilt" options={{ max: 25 }}>
-                  <div className="bg-violet p-10 rounded-3xl shadow-violet-5xl">
-                    <p className="text-5xl mb-6 font-bold">{repoData.name}</p>
-                    <p className="break-words">{repoData.description}</p>
-                    <div className="flex justify-evenly items-center mt-10 mb-5">
-                      <div className="flex justify-center items-center">
-                        <img src="/images/icons/warning.svg" alt="warning" className="h-6" />
-                        <p className="ml-2 text-6xl ">{repoData.open_issues}</p>
-                      </div>
-                      <div className="flex justify-center items-center">
-                        <img src="/images/icons/star.svg" alt="star" className="h-6" />
-                        <p className="ml-2 text-6xl ">{repoData.watchers}</p>
-                      </div>
-                      <div className="flex justify-center items-center">
-                        <img src="/images/icons/fork.svg" alt="fork" className="h-6" />
-                        <p className="ml-2 text-6xl ">{repoData.forks}</p>
-                      </div>
-                    </div>
-                    <p>
-                      Last Updated :
-                      <span className="italic font-light">
-                        {' '}
-                        {new Date(repoData.updated_at).toDateString()}
-                      </span>
-                    </p>
-                  </div>
-                </Tilt>
-              </a>
-            </div>
-          )}
         </div>
       </div>
     </>
