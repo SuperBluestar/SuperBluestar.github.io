@@ -144,8 +144,8 @@ const SKILLS: Skill[] = [
     src: '/images/skills/graphql.png'
   },
   {
-    name: 'Rapheal',
-    src: '/images/skills/rapheal.svg'
+    name: 'Raphael',
+    src: '/images/skills/raphael.svg'
   },
   {
     name: 'CanvasJS',
